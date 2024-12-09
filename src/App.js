@@ -21,6 +21,7 @@ import BankHeader from './BankAccountManagement/components/BankHeader';
 import BankHomePage from './BankAccountManagement/pages/BankHomePage';
 import CustomerPage from './BankAccountManagement/pages/CustomerPage';
 import AccountsPage from './BankAccountManagement/pages/AccountsPage';
+import UpdateAccountPage from './BankAccountManagement/pages/UpdateAccountPage';
 
 function App() {
 
@@ -67,6 +68,7 @@ function App() {
                 <Route path='/' element={<BankHomePage />} />
                 <Route path='/customers' element={<CustomerPage />} />
                 <Route path='/accounts' element={<AccountsPage />} />
+                <Route path="/update-account/:accountId" element={<UpdateAccountPage />} />
             </Routes>
     </div>
   )
