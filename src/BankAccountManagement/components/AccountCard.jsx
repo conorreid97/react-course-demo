@@ -8,7 +8,7 @@ const AccountCard = (props) => {
     return (
         <div className='account-card'>
             <h3>Account ID: {accountId}</h3>
-            <p>Balance: {balance}</p>
+            <p>Balance: £{balance}</p>
             <p>Customer ID: {customerId}</p>
             <p>Interest Rate: {interestRate}</p>
             <p>Type: {accountType}</p>

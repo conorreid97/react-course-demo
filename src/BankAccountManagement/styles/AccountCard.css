@@ -1,65 +1,82 @@
-@media (max-width: 480px) {
-    .account-card {
-        width: 100%; /* Full width within the container */
-        max-width: 90%; /* Limit the max width for better layout */
-        background: #ffffff; /* Use a clean white background for a modern look */
-        color: #333; /* Dark text for good readability */
-        border: 1px solid #ddd; /* Subtle border for separation */
-        border-radius: 10px; /* Rounded corners for a polished look */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-        margin: 0 auto 2em; /* Center the card and space it out */
-        padding: 1.5em; /* Add padding for content spacing */
-        transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effects */
-       
-    }
+/* Account Card Styling */
+.account-card {
+    margin: 1em auto;
+    width: 100%;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Hover effect to make cards interactive */
 .account-card:hover {
-    transform: translateY(-5px); /* Lift the card slightly */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Enhance the shadow */
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* Customer text formatting */
 .account-card h5 {
     font-size: 1.25rem;
     font-weight: bold;
     margin-bottom: 0.75em;
-    color: darkgreen; /* Use a green accent for the name */
+    color: darkgreen;
 }
 
 .account-card p {
     margin-bottom: 1em;
-    line-height: 1.5; /* Improve readability with line spacing */
+    line-height: 1.5;
 }
 
-/* Button styling */
+.account-card .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
 .account-card button {
     margin: 0 0.5em;
-    padding: 0.5em 1.5em;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     font-size: 0.9rem;
     cursor: pointer;
-    transition: background 0.2s ease;
+    transition: background 0.2s ease, transform 0.2s ease;
 }
 
-/* Primary button: Update */
+button:hover {
+    transform: scale(1.05);
+}
+
 .account-card .btn-primary {
     background: darkgreen;
     color: white;
 }
 
 .account-card .btn-primary:hover {
-    background: #005f00; /* Darker green on hover */
+    background: #005f00;
 }
 
-/* Danger button: Delete */
 .account-card .btn-danger {
     background: crimson;
     color: white;
 }
 
 .account-card .btn-danger:hover {
-    background: #b30000; /* Darker red on hover */
+    background: #b30000;
+}
+
+/* Responsive Account Card Styling */
+@media (max-width: 480px) {
+    .account-card {
+        width: 100%;
+        max-width: 90%;
+        background: #ffffff;
+        color: #333;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin: 0 auto 2em;
+        padding: 1.5em;
+    }
 }
