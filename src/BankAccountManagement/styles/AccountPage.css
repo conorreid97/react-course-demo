@@ -5,19 +5,24 @@
     justify-content: flex-start; /* Align items at the top */
     align-items: center;
     text-align: center;
-    padding-top: 100px;
     width: 100%;
+    min-height: 100vh; /* Ensure the container spans the full viewport height */
+    box-sizing: border-box;
+    padding: 20px;
 }
 
 .account-cards {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 20px; /* Add space between cards */
+    width: 100%;
     margin-top: 20px;
 }
 
 /* Main Content Area for Account Page */
 .main-content {
+    margin-top: 10px; /* Match the height of the fixed header */
     margin-left: 240px; /* Offset by sidebar width */
     padding: 80px 20px 20px; /* Add top padding to avoid overlapping header */
     text-align: center;
@@ -30,7 +35,7 @@
     font-weight: bold;
     margin-top: 20px;
     margin-bottom: 30px;
-    padding-top: 100px;
+    padding-top: 80px;
     text-align: center;
 }
 

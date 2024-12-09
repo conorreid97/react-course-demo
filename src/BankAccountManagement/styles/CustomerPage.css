@@ -90,7 +90,7 @@ header .company-banner {
     align-items: center; /* Vertically center the content */
     height: 100vh; /* Make the container fill the full viewport height */
     text-align: center; /* Center the text itself */
-    padding-top: 100px;
+    padding-top: 10px;
     width: 100%;
 }
 

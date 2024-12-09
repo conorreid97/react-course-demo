@@ -17,7 +17,6 @@ const AccountsPage = () => {
             </aside> 
             <div className='center-container'>
                 <h1>Display all accounts</h1>
-                
                 <ListAccountsComponent />
             </div>
             
