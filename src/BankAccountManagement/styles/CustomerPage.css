@@ -67,6 +67,7 @@ header .company-banner {
 
 /* Main Content Area */
 .main-content {
+    background-color: lightblue; /* Debug: highlight container */
     margin-left: 240px; /* Offset by sidebar width */
     padding: 80px 20px 20px; /* Add top padding to avoid overlapping header */
     text-align: center;
@@ -84,14 +85,17 @@ header .company-banner {
 }
 
 .center-container {
+    background-color: rgb(192, 192, 192); /* Debug: highlight container */
     display: flex; /* Use flexbox for easy centering */
     flex-direction: column; /* Stack children vertically */
-    justify-content: center; /* Horizontally center the content */
+    justify-content: flex-start; /* Horizontally center the content */
     align-items: center; /* Vertically center the content */
     height: 100vh; /* Make the container fill the full viewport height */
     text-align: center; /* Center the text itself */
-    padding-top: 10px;
+    padding-top: 0px;
     width: 100%;
+    min-height: 100vh; /* Ensure the container spans the full viewport height */
+    box-sizing: border-box;
 }
 
 /* Customer Cards */

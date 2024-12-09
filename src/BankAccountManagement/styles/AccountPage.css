@@ -21,7 +21,7 @@
 }
 
 /* Main Content Area for Account Page */
-.main-content {
+.account-page-main-content {
     margin-top: 10px; /* Match the height of the fixed header */
     margin-left: 240px; /* Offset by sidebar width */
     padding: 80px 20px 20px; /* Add top padding to avoid overlapping header */

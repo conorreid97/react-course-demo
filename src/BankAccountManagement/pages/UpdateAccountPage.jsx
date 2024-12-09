@@ -1,3 +1,4 @@
+import "../styles/Form.css";
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -40,7 +41,7 @@ const UpdateAccountPage = () => {
     };
 
     return (
-        <div className="center-container">
+        <div className="form-center-container">
             <h1>Update Account</h1>
             <form onSubmit={handleSubmit}>
                 <div>

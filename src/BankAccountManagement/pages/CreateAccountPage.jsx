@@ -1,7 +1,7 @@
+import "../styles/Form.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import "../styles/Form.css";
 
 const CreateAccountPage = () => {
     const navigate = useNavigate();
@@ -33,7 +33,7 @@ const CreateAccountPage = () => {
     };
 
     return (
-        <div className="center-container">
+        <div className="form-center-container">
             <h1>Create Account</h1>
             <form onSubmit={handleSubmit}>
                 <div>

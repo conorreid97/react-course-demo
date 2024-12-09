@@ -31,7 +31,7 @@ const CreateCustomerPage = () => {
     };
 
     return (
-        <div className="center-container">
+        <div className="form-center-container">
             <h1>Create Customer</h1>
             <form onSubmit={handleSubmit}>
                 <div>
