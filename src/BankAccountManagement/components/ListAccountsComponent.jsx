@@ -45,10 +45,12 @@ const ListAccountsComponent = () => {
         <div>
             {
                 accounts.map(account => 
-                    <AccountCard key={account.accountId} account={account} />)
+                    <AccountCard key={account.accountId} account={account}/>)
             }
         </div>
     )
 }
+
+
 
 export default ListAccountsComponent;

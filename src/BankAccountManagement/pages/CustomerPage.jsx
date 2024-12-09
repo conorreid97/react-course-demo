@@ -10,6 +10,7 @@ const CustomerPage = () => {
                 <nav>
                     <ul>
                         <li><Link to="/create-customer">Create Customer</Link></li>
+                        <li><Link to="/find-account-by-id">Find Account By ID</Link></li>
                     </ul>
                 </nav>
             </aside> 
