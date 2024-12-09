@@ -1,0 +1,18 @@
+header {
+    background-color: black;
+    Color: white;
+    padding: 2px 2px 0;
+  }
+
+  a {
+    font-size: large;
+    text-decoration: none;
+    color: white;
+    margin: auto 10px;
+  }
+
+  .company-banner {
+    font-size: xx-large;
+  }
+
+  

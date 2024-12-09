@@ -1,0 +1,59 @@
+.sidebar {
+    width: 200px; /* Sidebar width */
+    height: 100vh; /* Full height of the viewport */
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #2c3e50; /* Modern dark shade for the sidebar */
+    color: #ecf0f1; /* Light font color for contrast */
+    padding-top: 70px; /* Adjust to leave space for any header */
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow on the right */
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between navigation links */
+    padding: 20px;
+}
+
+.sidebar nav a {
+    color: #ecf0f1; /* White text color for links */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Adjust font size for readability */
+    padding: 10px 15px; /* Add spacing inside the links */
+    border-radius: 5px; /* Rounded corners for hover effect */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+.sidebar nav a:hover {
+    background-color: #34495e; /* Slightly lighter background on hover */
+    color: #1abc9c; /* Green highlight for hover state */
+    font-weight: bold; /* Optional: Emphasize hovered item */
+}
+
+.sidebar nav a.active {
+    background-color: #1abc9c; /* Highlight active page */
+    color: #2c3e50; /* Dark text for contrast */
+    font-weight: bold; /* Make it stand out */
+}
+
+.sidebar .logo {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #1abc9c; /* Green accent for logo */
+    margin-bottom: 30px;
+}
+
+.sidebar .logo img {
+    width: 100px;
+    border-radius: 50%; /* Circular logo if using an image */
+}
+
+
+
+
+
