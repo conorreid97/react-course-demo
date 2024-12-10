@@ -1,6 +1,7 @@
 import '../styles/AccountPage.css';
 import { Link } from 'react-router-dom';
 import ListAccountsComponent from "../components/ListAccountsComponent";
+import ListAPIAccountComponent from "../components/ListAPIAccountComponent"
 
 const AccountsPage = () => {
     return (
@@ -18,6 +19,7 @@ const AccountsPage = () => {
             <div className='center-container'>
                 <h1>Display all accounts</h1>
                 <ListAccountsComponent />
+                <ListAPIAccountComponent />
             </div>
             
         </div>

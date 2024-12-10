@@ -31,6 +31,10 @@ const UpdateAccountPage = () => {
     // Submit the updated data
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        console.log("Updating account with ID:", accountId);
+        console.log("Form data being sent:", formData);
+
         axios
             .put(`${api}/${accountId}`, formData)
             .then(() => {

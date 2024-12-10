@@ -10,8 +10,11 @@ const ListAccountsComponent = () => {
     const loadAccounts = () => {
         axios
             .get(api)
-            .then((response) => setAccounts(response.data))
-            .catch((error) => console.error("Error fetching accounts:", error));
+            .then((response) => {
+                setAccounts(response.data)
+                console.log('Accounts not found')
+            })  
+            .catch(error => console.error("Error fetching accounts:", error));
     };
 
     // Delete an account by ID
@@ -23,7 +26,7 @@ const ListAccountsComponent = () => {
                     alert("Account deleted successfully!");
                     loadAccounts(); // Reload accounts after deletion
                 })
-                .catch((error) => console.error("Error deleting account:", error));
+                .catch((error) => console.error("Error deleting account:", error, accountId));
         }
     };
 
