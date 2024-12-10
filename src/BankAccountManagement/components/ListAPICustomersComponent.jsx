@@ -30,3 +30,5 @@ const ListAPICustomersComponent = () => {
         </div>
     )
 }
+
+export default ListAPICustomersComponent;

@@ -7,10 +7,12 @@ const CustomerCard = ({ customer, onUpdate, onDelete}) => {
     const navigate = useNavigate();
 
     return (
-        <div className='customer-card'>
+        <div className='customer-card-main'>
             <h3>Customer ID: {customerId}</h3>
             <p>Name: {name}</p>
-            <p>Address: {address}</p>
+            <p> 
+                Address: {address.streetNumber}, {address.city}, {address.province} {address.postalCode}
+            </p>
             <p>Type: {customerType}</p>
             <button className="btn-primary" onClick={() => onUpdate(customerId)}>Update</button>
             <button className="btn-danger" onClick={() => onDelete(customerId)}>Delete</button>

@@ -1,40 +1,40 @@
-@media (max-width: 480px) {
-    .customer-card {
-        width: 100%; /* Full width within the container */
-        max-width: 90%; /* Limit the max width for better layout */
-        background: #ffffff; /* Use a clean white background for a modern look */
-        color: #333; /* Dark text for good readability */
-        border: 1px solid #ddd; /* Subtle border for separation */
-        border-radius: 10px; /* Rounded corners for a polished look */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-        margin: 0 auto 2em; /* Center the card and space it out */
-        padding: 1.5em; /* Add padding for content spacing */
-        transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effects */
-       
-    }
+
+.customer-card-main {
+    width: 100%; /* Full width within the container */
+    max-width: 120%; /* Limit the max width for better layout */
+    background: #2c3e50; /* Use a clean white background for a modern look */
+    color: white; /* Dark text for good readability */
+    border: 1px solid #03a70b; /* Subtle border for separation */
+    border-radius: 10px; /* Rounded corners for a polished look */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 0 auto 2em; /* Center the card and space it out */
+    padding: 1.5em; /* Add padding for content spacing */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effects */
+    
 }
 
+
 /* Hover effect to make cards interactive */
-.customer-card:hover {
+.customer-card-main:hover {
     transform: translateY(-5px); /* Lift the card slightly */
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Enhance the shadow */
 }
 
 /* Customer text formatting */
-.customer-card h5 {
+.customer-card-main h5 {
     font-size: 1.25rem;
     font-weight: bold;
     margin-bottom: 0.75em;
     color: darkgreen; /* Use a green accent for the name */
 }
 
-.customer-card p {
+.customer-card-main p {
     margin-bottom: 1em;
     line-height: 1.5; /* Improve readability with line spacing */
 }
 
 /* Button styling */
-.customer-card button {
+.customer-card-main button {
     margin: 0 0.5em;
     padding: 0.5em 1.5em;
     border: none;
@@ -45,21 +45,21 @@
 }
 
 /* Primary button: Update */
-.customer-card .btn-primary {
+.customer-card-main .btn-primary {
     background: darkgreen;
     color: white;
 }
 
-.customer-card .btn-primary:hover {
+.customer-card-main .btn-primary:hover {
     background: #005f00; /* Darker green on hover */
 }
 
 /* Danger button: Delete */
-.customer-card .btn-danger {
+.customer-card-main .btn-danger {
     background: crimson;
     color: white;
 }
 
-.customer-card .btn-danger:hover {
+.customer-card-main .btn-danger:hover {
     background: #b30000; /* Darker red on hover */
 }
