@@ -10,7 +10,12 @@ const UpdateCustomerPage = () => {
 
     const [formData, setFormData] = useState({
         name: "",
-        address: "",
+        address: {
+            streetNumber: "",
+            city: "",
+            province: "",
+            postalCode: "",
+        },
         customerType: "",
     });
 
@@ -24,6 +29,15 @@ const UpdateCustomerPage = () => {
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
+    };
+
+    // Handle changes for nested address fields
+    const handleAddressChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            address: { ...formData.address, [name]: value },
+        });
     };
 
     const handleSubmit = (e) => {
@@ -52,12 +66,42 @@ const UpdateCustomerPage = () => {
                     />
                 </div>
                 <div>
-                    <label>Address:</label>
+                    <label>Street Number:</label>
                     <input
                         type="text"
-                        name="address"
-                        value={formData.address}
-                        onChange={handleChange}
+                        name="streetNumber"
+                        value={formData.address.streetNumber}
+                        onChange={handleAddressChange}
+                        required
+                    />
+                </div>
+                <div>
+                    <label>City:</label>
+                    <input
+                        type="text"
+                        name="city"
+                        value={formData.address.city}
+                        onChange={handleAddressChange}
+                        required
+                    />
+                </div>
+                <div>
+                    <label>Province:</label>
+                    <input
+                        type="text"
+                        name="province"
+                        value={formData.address.province}
+                        onChange={handleAddressChange}
+                        required
+                    />
+                </div>
+                <div>
+                    <label>Postal Code:</label>
+                    <input
+                        type="text"
+                        name="postalCode"
+                        value={formData.address.postalCode}
+                        onChange={handleAddressChange}
                         required
                     />
                 </div>

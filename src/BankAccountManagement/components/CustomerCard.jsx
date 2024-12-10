@@ -2,7 +2,7 @@ import '../styles/CustomerCard.css';
 import { useNavigate } from "react-router-dom";
 import PropTypes from 'prop-types';
 
-const CustomerCard = ({ customer, onUpdate, onDelete}) => {
+const CustomerCard = ({ customer, onDelete}) => {
     const { customerId, name, address, customerType } = customer;
     const navigate = useNavigate();
 
@@ -14,7 +14,7 @@ const CustomerCard = ({ customer, onUpdate, onDelete}) => {
                 Address: {address.streetNumber}, {address.city}, {address.province} {address.postalCode}
             </p>
             <p>Type: {customerType}</p>
-            <button className="btn-primary" onClick={() => onUpdate(customerId)}>Update</button>
+            <button className="btn-primary" onClick={() => navigate(`/update-customer/${customerId}`)}>Update</button>
             <button className="btn-danger" onClick={() => onDelete(customerId)}>Delete</button>
         </div>
     );
