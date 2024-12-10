@@ -1,9 +1,10 @@
 import '../styles/CustomerCard.css';
+import { useNavigate } from "react-router-dom";
 import PropTypes from 'prop-types';
 
-const CustomerCard = (props) => {
-    const { customerId, name, address, customerType } = props.customer;
-    const { onUpdate, onDelete } = props;
+const CustomerCard = ({ customer, onUpdate, onDelete}) => {
+    const { customerId, name, address, customerType } = customer;
+    const navigate = useNavigate();
 
     return (
         <div className='customer-card'>

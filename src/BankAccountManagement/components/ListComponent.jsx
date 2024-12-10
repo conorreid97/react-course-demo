@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import CustomerCard from './CustomerCard';
+import { useNavigate } from "react-router-dom";
 
 const ListComponent = () => {
+    const navigate = useNavigate();
     // Pair of empty brackets indicate that we start with an empty list
     const [customers, setCustomers ] = useState([
         {
@@ -24,6 +26,16 @@ const ListComponent = () => {
         }
     ]);
 
+    const updateCustomer = (customerId) => {
+        navigate(`/update-customer/${customerId}`)
+    };
+
+    const deleteCustomer = (customerId) => {
+        if (window.confirm("Are you sure you want to delete this account?")) {
+        
+        }
+    };
+
     return (
         <div>
            
@@ -31,7 +43,12 @@ const ListComponent = () => {
             {/* Option 2 */}
             {
                 customers.map(customer => 
-                <CustomerCard key={customer.customerId} customer={customer} />)
+                <CustomerCard 
+                key={customer.customerId} 
+                customer={customer} 
+                onUpdate={updateCustomer}
+                onDelete={deleteCustomer}
+                />)
             }
         </div>
     )

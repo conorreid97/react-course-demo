@@ -40,13 +40,28 @@ const ListAccountsComponent = () => {
             accountType: 'Savings'
         },
     ]);
+    // Delete an account by ID
+    const deleteAccount = (accountId) => {
+        if (window.confirm("Are you sure you want to delete this account?")) {
+            // axios
+            //     .delete(`${api}/${accountId}`)
+            //     .then(() => {
+            //         alert("Account deleted successfully!");
+            //         loadAccounts(); // Reload accounts after deletion
+            //     })
+            //     .catch((error) => console.error("Error deleting account:", error));
+        }
+    };
 
     return (
         <div>
-            {
-                accounts.map(account => 
-                    <AccountCard key={account.accountId} account={account}/>)
-            }
+            {accounts.map((account) => (
+                <AccountCard
+                    key={account.accountId}
+                    account={account}
+                    onDelete={deleteAccount}
+                />
+            ))}
         </div>
     )
 }

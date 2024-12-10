@@ -38,7 +38,7 @@ const UpdateCustomerPage = () => {
     };
 
     return (
-        <div className="center-container">
+        <div className="form-center-container">
             <h1>Update Customer</h1>
             <form onSubmit={handleSubmit}>
                 <div>
