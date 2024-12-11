@@ -1,0 +1,135 @@
+/* SearchPage.css */
+
+/* General Page Styling */
+.search-page-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-top: 80px;
+}
+
+/* Header Styling */
+.search-page-container h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+.search-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-form label {
+    font-weight: bold;
+    color: #555;
+}
+
+.search-form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.search-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Error Message Styling */
+.error-message {
+    color: #ff4d4f;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Customer Details Section */
+.customer-details {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.customer-details h2 {
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+/* Accounts List Table */
+.accounts-list {
+    margin-top: 20px;
+}
+
+.accounts-list h2 {
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.accounts-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.accounts-list table th,
+.accounts-list table td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.accounts-list table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #333;
+}
+
+.accounts-list table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.accounts-list table td {
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .search-page-container {
+        padding: 10px;
+    }
+
+    .search-form input,
+    .search-form button {
+        font-size: 14px;
+    }
+
+    .accounts-list table th,
+    .accounts-list table td {
+        font-size: 14px;
+    }
+}

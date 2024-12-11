@@ -7,10 +7,7 @@ import UpdateAccountAPI from "../components/UpdateAccountAPI";
 const UpdateAccountPage = () => {
     return (
         <div className="form-center-container">
-            <h1>Update Account</h1>
-
             <UpdateAccountAPI />
-
         </div>
             
     )
