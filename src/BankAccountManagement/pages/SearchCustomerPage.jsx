@@ -1,6 +1,5 @@
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 import "../styles/SearchPage.css";
 
 const SearchCustomerPage = () => {
@@ -23,9 +22,12 @@ const SearchCustomerPage = () => {
             const customerResponse = await axios.get(`${apiCustomer}/${customerId}`);
             setCustomer(customerResponse.data);
 
-            // Fetch accounts for the customer by ID
-            const accountsResponse = await axios.get(`${apiAccounts}?customerId=${customerId}`);
-            setAccounts(accountsResponse.data);
+            // Filter accounts for this specific customer
+            const accountsResponse = await axios.get(`${apiAccounts}`);
+            const filteredAccounts = accountsResponse.data.filter(
+                (account) => account.customerId === parseInt(customerId)
+            );
+            setAccounts(filteredAccounts);
         } catch (err) {
             console.error("Error fetching data:", err);
             setError("Customer not found or error fetching accounts.");

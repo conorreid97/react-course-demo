@@ -1,8 +1,10 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import "../styles/Form.css";
+import { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const CreateCustomerAPI = () => {
+const UpdateCustomerAPI = () => {
+    const { customerId } = useParams();
     const navigate = useNavigate();
     const api = "http://localhost:8080/api/v1/customers";
 
@@ -17,22 +19,16 @@ const CreateCustomerAPI = () => {
         customerType: "",
     });
 
-    // Handle form input changes
+    useEffect(() => {
+        axios
+            .get(`${api}/${customerId}`)
+            .then((response) => setFormData(response.data))
+            .catch((error) => console.error("Error fetching customer data:", error));
+    }, [customerId]);
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
-    };
-
-    // Handle form submission
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        axios
-            .post(api, formData)
-            .then(() => {
-                alert("Customer created successfully!");
-                navigate("/customers");
-            })
-            .catch((error) => console.error("Error creating customer:", error));
     };
 
     // Handle changes for nested address fields
@@ -43,10 +39,22 @@ const CreateCustomerAPI = () => {
             address: { ...formData.address, [name]: value },
         });
     };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        axios
+            .put(`${api}/${customerId}`, formData)
+            .then(() => {
+                alert("Customer updated successfully!");
+                navigate("/customers");
+            })
+            .catch((error) => console.error("Error updating customer:", error));
+    };
+    
     
     return(
         <div className="form-center-container">
-            <h1>Create Customer</h1>
+            <h1>Update Customer</h1>
             <form onSubmit={handleSubmit}>
                 <div>
                     <label>Name:</label>
@@ -108,12 +116,10 @@ const CreateCustomerAPI = () => {
                         required
                     />
                 </div>
-                <button className="btn-primary" type="submit">
-                    Create
-                </button>
+                <button type="submit">Update</button>
             </form>
         </div>
     );
 };
 
-export default CreateCustomerAPI;
+export default UpdateCustomerAPI;
