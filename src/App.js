@@ -25,7 +25,8 @@ import UpdateAccountPage from './BankAccountManagement/pages/UpdateAccountPage';
 import UpdateCustomerPage from './BankAccountManagement/pages/UpdateCustomerPage';
 import CreateCustomerPage from './BankAccountManagement/pages/CreateCustomerPage';
 import CreateAccountPage from './BankAccountManagement/pages/CreateAccountPage';
-import SearchPage from './BankAccountManagement/pages/SearchPage';
+import SearchCustomerPage from './BankAccountManagement/pages/SearchCustomerPage';
+import SearchAccountPage from './BankAccountManagement/pages/SearchAccountPage';
 
 function App() {
 
@@ -76,7 +77,8 @@ function App() {
                 <Route path='/accounts' element={<AccountsPage />} />
                 <Route path="/update-account/:accountId" element={<UpdateAccountPage />} />
                 <Route path="/create-account" element={<CreateAccountPage />} />
-                <Route path="/find-by-id" element={<SearchPage />} />
+                <Route path="/find-by-id" element={<SearchCustomerPage />} />
+                <Route path="/find-account-by-id" element={<SearchAccountPage />} />
             </Routes>
     </div>
   )

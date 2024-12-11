@@ -1,5 +1,5 @@
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
-import SearchPage from "./BankAccountManagement/pages/SearchPage";
+import SearchPage from "./BankAccountManagement/pages/SearchCustomerPage";
 import axios from "axios";
 
 // Mock axios
