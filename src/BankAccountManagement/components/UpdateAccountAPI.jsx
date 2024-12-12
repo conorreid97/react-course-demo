@@ -13,12 +13,17 @@ const UpdateAccountAPI = () => {
         accountType: "",
     });
 
+    const [error, setError] = useState(null); // State to track errors
+
     // Load the current account data
     useEffect(() => {
         axios
             .get(`${api}/${accountId}`)
             .then((response) => setFormData(response.data))
-            .catch((error) => console.error("Error fetching account:", error));
+            .catch((error) => {
+                console.error("Error fetching account:", error);
+                setError("Failed to fetch account details. Please try again later.");
+            });
     }, [accountId]);
 
     // Handle form changes
@@ -30,7 +35,7 @@ const UpdateAccountAPI = () => {
     // Submit the updated data
     const handleSubmit = (e) => {
         e.preventDefault();
-
+        setError(null); // Clear any previous error
         console.log("Updating account with ID:", accountId);
         console.log("Form data being sent:", formData);
 
@@ -40,12 +45,20 @@ const UpdateAccountAPI = () => {
                 alert("Account updated successfully!");
                 navigate("/accounts");
             })
-            .catch((error) => console.error("Error updating account:", error));
+            .catch((error) => {
+                console.error("Error updating account:", error);
+                setError("Failed to update account. Please check your input and try again.");
+            });
     };
 
     return (
         <div className="form-center-container">
             <h1>Update Account</h1>
+
+            {/* Display error message if any */}
+            {error && <p className="error-message">{error}</p>}
+
+
             <form onSubmit={handleSubmit}>
                 <div>
                     <label>Balance:</label>

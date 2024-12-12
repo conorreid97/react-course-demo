@@ -19,12 +19,17 @@ const UpdateCustomerAPI = () => {
         customerType: "",
     });
 
+    const [error, setError] = useState(null); // State to track errors
+
     useEffect(() => {
         axios
             .get(`${api}/${customerId}`)
             .then((response) => setFormData(response.data))
-            .catch((error) => console.error("Error fetching customer data:", error));
-    }, [customerId]);
+            .catch((error) => {
+                console.error("Error fetching customer data:", error);
+                setError("Failed to fetch account details. Please try again later.");
+            });
+        }, [customerId]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -42,19 +47,28 @@ const UpdateCustomerAPI = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        setError(null); // Clear any previous error
+
         axios
             .put(`${api}/${customerId}`, formData)
             .then(() => {
                 alert("Customer updated successfully!");
                 navigate("/customers");
             })
-            .catch((error) => console.error("Error updating customer:", error));
+            .catch((error) => {
+                console.error("Error updating customer:", error);
+                setError("Failed to update account. Please check your input and try again.");
+            });
     };
     
     
     return(
         <div className="form-center-container">
             <h1>Update Customer</h1>
+
+             {/* Display error message if any */}
+             {error && <p className="error-message">{error}</p>}
+
             <form onSubmit={handleSubmit}>
                 <div>
                     <label>Name:</label>
