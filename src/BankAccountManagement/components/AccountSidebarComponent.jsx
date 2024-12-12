@@ -9,7 +9,7 @@ const AccountSidebarComponent = () => {
                     <ul>
                         <li><Link to="/create-account">Create Account</Link></li>
                         <li><Link to="/find-account-by-id">Find Account By ID</Link></li>
-                        <li><Link to="/find-account-by-city">Find Account By City</Link></li>
+                        <li><Link to="/find-by-city">Find By City</Link></li>
                     </ul>
                 </nav>
             </aside> 

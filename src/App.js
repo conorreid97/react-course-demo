@@ -12,6 +12,8 @@ import CreateCustomerPage from './BankAccountManagement/pages/CreateCustomerPage
 import CreateAccountPage from './BankAccountManagement/pages/CreateAccountPage';
 import SearchCustomerPage from './BankAccountManagement/pages/SearchCustomerPage';
 import SearchAccountPage from './BankAccountManagement/pages/SearchAccountPage';
+import FindAccountByCity from './BankAccountManagement/components/FindByCityAPI';
+import FindByCityPage from './BankAccountManagement/pages/FindByCityPage';
 
 function App() {
 
@@ -28,6 +30,7 @@ function App() {
                 <Route path="/create-account" element={<CreateAccountPage />} />
                 <Route path="/find-by-id" element={<SearchCustomerPage />} />
                 <Route path="/find-account-by-id" element={<SearchAccountPage />} />
+                <Route path="/find-by-city" element={<FindByCityPage />} />
             </Routes>
     </div>
   )
